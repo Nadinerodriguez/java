@@ -7,14 +7,17 @@ public class RodriguezNadine1{
     String targetString = args[0];
     String textName = args[1];
     File f = new File(textName);
+   
     if(!f.exists()){ /* If file doesn't exist */
       System.out.println("File cannot be found!");
       System.exit(0); /* Program will terminate here if file isn't found */
     }
+   
     Scanner search = new Scanner(f); /* This scanner object looks for the target string in the file */
     int fileLine = 0;/* Initialized at 0 and starts at 1 when it enters the while loop (fileLine++)*/
     boolean matchFound = false;  /* Initialized as false and becomes true when it enters the while loop */
     int matchNum = 0; /* Number of occurences that the target string is found */
+    
     while(search.hasNextLine()){
       fileLine++;
       String currLine = search.nextLine(); /* Returns the text at the current line */
