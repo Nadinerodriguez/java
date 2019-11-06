@@ -41,6 +41,7 @@ public class RodriguezNadine1{
         }
       }
     }
+    
     search.close();
     if(matchFound){
       System.out.println("There are " + matchNum + " number of occurrences in this file");
