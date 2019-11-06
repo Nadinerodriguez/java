@@ -8,7 +8,7 @@ public class RodriguezNadine1 {
     String textName = args[1];
     File f = new File(textName);
    
-    if(!f.exists()){ /* If file doesn't exist */
+    if(!f.exists()) { /* If file doesn't exist */
       System.out.println("File cannot be found!");
       System.exit(0); /* Program will terminate here if file isn't found */
     }
