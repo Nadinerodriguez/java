@@ -18,7 +18,7 @@ public class RodriguezNadine1 {
     boolean matchFound = false;  /* Initialized as false and becomes true when it enters the while loop */
     int matchNum = 0; /* Number of occurences that the target string is found */
     
-    while(search.hasNextLine()){
+    while(search.hasNextLine()) {
       fileLine++;
       String currLine = search.nextLine(); /* Returns the text at the current line */
       if(currLine.contains(targetString)){
