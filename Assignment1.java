@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-public class RodriguezNadine1 {
+public class Assignment1 {
   public static void main(String[] args) throws FileNotFoundException {
     String targetString = args[0];
     String textName = args[1];
