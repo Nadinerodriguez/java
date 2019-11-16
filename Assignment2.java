@@ -10,8 +10,13 @@ public class RodriguezNadine2 {
             double userInput = input.nextDouble(); /*Gets user input */
             c[i] = new Circle(userInput); /* Assigns radius value to the respective circle */
         }
-        
+        if(c[0].equals(c[1]))
+            System.out.println("The 2 circles are equal. " + c[0].toString()); /*Since they're equal I can print either of the circle's circumference/area */
+        else
+            System.out.println("They are not equal. " + c[0].toString() + "\n" + c[1].toString()); /* Calls toString method and prints their values */
 
+        input.close(); /* Closes the scanner */
+     
     }
     static class Circle{
         private double radius;
