@@ -2,6 +2,15 @@ import java.util.Scanner;
 
 public class RodriguezNadine2 {
     public static void main(String[] args) {
+        Circle []c = new Circle[2]; /* Creates an array of 2 objects */
+        Scanner input = new Scanner(System.in);
+        /* This for loop will get user input of radius twice */
+        for(int i = 0; i<2; i++){
+            System.out.println("Enter a radius for circle " + (i+1) + ": ");
+            double userInput = input.nextDouble(); /*Gets user input */
+            c[i] = new Circle(userInput); /* Assigns radius value to the respective circle */
+        }
+        
 
     }
     static class Circle{
