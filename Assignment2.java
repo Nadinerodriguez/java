@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class RodriguezNadine2 {
+public class Assignment2 {
     public static void main(String[] args) {
         Circle []c = new Circle[2]; /* Creates an array of 2 objects */
         Scanner input = new Scanner(System.in);
