@@ -37,4 +37,21 @@ class Movie {
         return this.title + " (" + this.duration + " minutes)";
     }
 }
+class Auditorium {
+    // Attributes
+    private int id, capacity;
+    //    Constructor
+    public Auditorium(int i, int c) {
+        this.id = i;
+        this.capacity = c;
+    }
+    // Getter
+    public int getCapacity() {
+        return this.capacity;
+    }
+    // toString
+    public String toString(){
+        return "Auditorium " + this.id;
+    }
+}
     
