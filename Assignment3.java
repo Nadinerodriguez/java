@@ -128,4 +128,21 @@ class Theater {
             }
         }
     }
+        public void sellTickets() {
+        // Tracks the total number of tickets sold and revenue
+        int totalNumberSold = 0;
+        double totalRevenue = 0;
+        System.out.println("Sales for the day:");
+        // For each showing, it calculates the sales and revenue
+        for (Showing s : showings) {
+            double percentSold = (s.getMovie().getPopularity()) / Movie.maxPopularity;
+            int numberSold = (int) ((s.getAuditorium().getCapacity()) * percentSold);
+            double revenue = this.ticketPrice * numberSold;
+            totalNumberSold += numberSold;
+            totalRevenue += revenue;
+            System.out.println(s.toString() + ". " + numberSold + " tickets were sold. The revenue is: $" + revenue);
+        }
+        System.out.println("Total tickets sold today: " + totalNumberSold + "\nTotal revenue generated today: $" + totalRevenue + "\n");
+    }
+}
     
