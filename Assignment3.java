@@ -112,4 +112,20 @@ class Theater {
                 new Auditorium(3, 360))
         );
     }
+    private Movie randomMovie() {
+        return this.movies.get(random.nextInt(movies.size()));
+    }
+    public void schedule() {
+        // Clears the showings ArrayList
+        this.showings.clear();
+        // For each auditorium, this generates Showings by scheduling one movie at a time until no more can be scheduled
+        for (Auditorium a : auditoriums) {
+            LocalTime nextShowtime = firstShowtime;
+            while (nextShowtime.isBefore(lastShowtime)) {
+                Movie nextMovie = randomMovie();
+                showings.add(new Showing(nextMovie, a, nextShowtime));
+                nextShowtime = nextShowtime.plusMinutes(nextMovie.getDuration() + timeBetweenShowings);
+            }
+        }
+    }
     
