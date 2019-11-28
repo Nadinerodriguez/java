@@ -54,4 +54,32 @@ class Auditorium {
         return "Auditorium " + this.id;
     }
 }
+class Showing {
+    // Attributes
+    private Movie movie;
+    private Auditorium auditorium;
+    private LocalTime showtime;
+    //    Constructor
+    public Showing(Movie m, Auditorium a, LocalTime s) {
+        this.movie = m;
+        this.auditorium = a;
+        this.showtime = s;
+    }
+    // Getter
+    public Movie getMovie() {
+        return this.movie;
+    }
+    // Getter
+    public Auditorium getAuditorium() {
+        return this.auditorium;
+    }
+    // Getter
+    public LocalTime getShowtime() {
+        return this.showtime;
+    }
+    // toString
+    public String toString() {
+        return this.movie.toString() + " in " + this.auditorium.toString()+ " at "+ getShowtime();
+    }
+}
     
