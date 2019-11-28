@@ -12,3 +12,29 @@ public class Assignment3 {
             days[i].sellTickets();
         }
     }
+class Movie {
+    // Attributes
+    private String title;
+    private int duration; // in minutes
+    private double popularity;
+    public static int maxPopularity = 10;
+    //    Constructor
+    public Movie(String t, int d, double p) {
+        this.title = t;
+        this.duration = d;
+        this.popularity = p;
+    }
+    // Getter
+    public int getDuration() {
+        return this.duration;
+    }
+    // Getter
+    public double getPopularity() {
+        return this.popularity;
+    }
+    // toString
+    public String toString() {
+        return this.title + " (" + this.duration + " minutes)";
+    }
+}
+    
