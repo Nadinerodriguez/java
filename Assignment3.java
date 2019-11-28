@@ -82,4 +82,34 @@ class Showing {
         return this.movie.toString() + " in " + this.auditorium.toString()+ " at "+ getShowtime();
     }
 }
+class Theater {
+    // Attributes
+    private static Random random = new Random(); // used to randomly select which movies are shown
+    public static int timeBetweenShowings = 15; // represents the time it takes to clean the theater between movie showings, in minutes
+    private LocalTime firstShowtime; // the time the first movie of the day is shown
+    private LocalTime lastShowtime; // the time after which no more showings will begin
+    private double ticketPrice;
+    private ArrayList<Movie> movies; // a selection of movies the Theater has the rights to show
+    private ArrayList<Auditorium> auditoriums; //the various auditoriums the theater contains for showing movies
+    private ArrayList<Showing> showings; //essentially the schedule of movie showings for the day
+
+    // Constructor
+    public Theater() {
+        this.firstShowtime = LocalTime.of(10, 0); // 10 a.m
+        this.lastShowtime = LocalTime.of(23, 0); // 11 p.m
+        this.showings = new ArrayList<Showing>();
+        this.ticketPrice = 16;
+        // initialized 3 movies
+        this.movies = new ArrayList<Movie>(Arrays.asList(
+                new Movie("Spiderman", 140, 8.5),
+                new Movie("Batman", 136, 9.2),
+                new Movie("Superman", 125, 7.4))
+        );
+        // initialized 3 auditoriums ids with different capacities
+        this.auditoriums = new ArrayList<Auditorium>(Arrays.asList(
+                new Auditorium(1, 270),
+                new Auditorium(2, 240),
+                new Auditorium(3, 360))
+        );
+    }
     
