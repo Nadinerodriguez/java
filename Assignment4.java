@@ -21,5 +21,8 @@ class BannerMaker extends JFrame{
         setSize(WIDTH, HEIGHT);
         setTitle("Banner Maker");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        contentPane = getContentPane();
+        contentPane.setLayout(new BorderLayout());
      }
 }
