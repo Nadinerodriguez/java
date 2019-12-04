@@ -24,5 +24,16 @@ class BannerMaker extends JFrame{
         
         contentPane = getContentPane();
         contentPane.setLayout(new BorderLayout());
+        
+//      CENTER SECTION
+        JPanel textPanel = new JPanel();
+        contentPane.add(textPanel, BorderLayout.CENTER);
+        textPanel.setBackground(Color.WHITE);
+        textPanel.setLayout(new BorderLayout());
+
+        theText = new JTextField("Center Text");
+        textPanel.add(theText);
+        theText.setFont(textFont);
+//      END OF CENTER SECTION
      }
 }
