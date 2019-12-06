@@ -64,5 +64,28 @@ class BannerMaker extends JFrame{
         colorPanel.add(green);
         green.addActionListener(colorBL);
 //      END OF COLOR SECTION
+
+//      STYLE SECTION
+        JPanel stylePanel = new JPanel();
+        contentPane.add(stylePanel, BorderLayout.EAST);
+        stylePanel.setBackground(Color.WHITE);
+        stylePanel.setLayout(new GridLayout(3,1));
+        StyleButtonListener styleBL = new StyleButtonListener(theText);
+
+        JButton bold = new JButton("Bold");
+        bold.setFont(new Font(Font.SERIF,Font.BOLD,20));
+        stylePanel.add(bold);
+        bold.addActionListener(styleBL);
+
+        JButton italic = new JButton("Italic");
+        italic.setFont(new Font(Font.SERIF,Font.ITALIC,20));
+        stylePanel.add(italic);
+        italic.addActionListener(styleBL);
+
+        JButton plain = new JButton("Plain");
+        plain.setFont(new Font(Font.SERIF,Font.PLAIN,20));
+        stylePanel.add(plain);
+        plain.addActionListener(styleBL);
+//      END OF STYLE SECTION
      }
 }
