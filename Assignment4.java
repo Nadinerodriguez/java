@@ -104,5 +104,17 @@ class BannerMaker extends JFrame{
         fontPanel.add(sansSerif);
         sansSerif.addActionListener(fontBL);
 //      END OF FONT SECTION
+
+//      Size SECTION (EXTRA CREDIT)
+        JPanel sizePanel = new JPanel();
+        contentPane.add(sizePanel, BorderLayout.NORTH);
+        sizePanel.setBackground(Color.WHITE);
+        sizePanel.setLayout(new FlowLayout());
+
+        JButton size = new JButton("Change Font Size");
+        size.addActionListener(fontBL);
+        sizePanel.add(theSizeText);
+        sizePanel.add(size);
+//      END OF SIZE SECTION
      }
 }
