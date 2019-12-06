@@ -87,5 +87,22 @@ class BannerMaker extends JFrame{
         stylePanel.add(plain);
         plain.addActionListener(styleBL);
 //      END OF STYLE SECTION
+
+//      FONT SECTION
+        JPanel fontPanel = new JPanel();
+        contentPane.add(fontPanel, BorderLayout.SOUTH);
+        fontPanel.setBackground(Color.WHITE);
+        fontPanel.setLayout(new FlowLayout());
+        theSizeText = new JTextField(Float.toString((float)(textFont.getSize())), 5); // Needed for the extra credit
+        FontButtonListener fontBL = new FontButtonListener(theText,theSizeText);
+
+        JButton serif = new JButton("Serif");
+        fontPanel.add(serif);
+        serif.addActionListener(fontBL);
+
+        JButton sansSerif = new JButton("Sans-serif");
+        fontPanel.add(sansSerif);
+        sansSerif.addActionListener(fontBL);
+//      END OF FONT SECTION
      }
 }
