@@ -152,4 +152,10 @@ private JTextField textField;
         this.textField = t;
         this.sizeField = s;
     }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getActionCommand().equals("Serif")) this.textField.setFont(new Font(
+                Font.SERIF,
+                textField.getFont().getStyle(),
+                textField.getFont().getSize()));
 }
