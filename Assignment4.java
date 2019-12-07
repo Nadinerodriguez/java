@@ -137,5 +137,10 @@ class StyleButtonListener implements ActionListener {
     public StyleButtonListener(JTextField t) {
         this.textField = t;
     }
-    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getActionCommand().equals("Bold")) this.textField.setFont(textField.getFont().deriveFont(Font.BOLD));
+        if(e.getActionCommand().equals("Italic")) this.textField.setFont(textField.getFont().deriveFont(Font.ITALIC));
+        if(e.getActionCommand().equals("Plain")) this.textField.setFont(textField.getFont().deriveFont(Font.PLAIN));
+    }
 }
