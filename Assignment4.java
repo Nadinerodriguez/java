@@ -144,3 +144,5 @@ class StyleButtonListener implements ActionListener {
         if(e.getActionCommand().equals("Plain")) this.textField.setFont(textField.getFont().deriveFont(Font.PLAIN));
     }
 }
+class FontButtonListener implements ActionListener {
+}
