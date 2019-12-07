@@ -145,4 +145,11 @@ class StyleButtonListener implements ActionListener {
     }
 }
 class FontButtonListener implements ActionListener {
+private JTextField textField;
+    private JTextField sizeField;
+
+    public FontButtonListener(JTextField t, JTextField s) {
+        this.textField = t;
+        this.sizeField = s;
+    }
 }
