@@ -118,3 +118,16 @@ class BannerMaker extends JFrame{
 //      END OF SIZE SECTION
      }
 }
+class ColorButtonListener implements ActionListener {
+    private JTextField textField;
+
+    public ColorButtonListener(JTextField t) {
+        this.textField = t;
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getActionCommand().equals("Red")) this.textField.setBackground(Color.RED);
+        if(e.getActionCommand().equals("Yellow")) this.textField.setBackground(Color.YELLOW);
+        if(e.getActionCommand().equals("Green")) this.textField.setBackground(Color.GREEN);
+    }
+}
