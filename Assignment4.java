@@ -162,4 +162,9 @@ private JTextField textField;
                 Font.SANS_SERIF,
                 textField.getFont().getStyle(),
                 textField.getFont().getSize()));
+        if(e.getActionCommand().equals("Change Font Size")) {
+            float textSize = Float.parseFloat(sizeField.getText());
+            this.textField.setFont(textField.getFont().deriveFont(textSize));
+        }
+    }
 }
