@@ -131,3 +131,11 @@ class ColorButtonListener implements ActionListener {
         if(e.getActionCommand().equals("Green")) this.textField.setBackground(Color.GREEN);
     }
 }
+class StyleButtonListener implements ActionListener {
+    private JTextField textField;
+
+    public StyleButtonListener(JTextField t) {
+        this.textField = t;
+    }
+    
+}
