@@ -158,4 +158,8 @@ private JTextField textField;
                 Font.SERIF,
                 textField.getFont().getStyle(),
                 textField.getFont().getSize()));
+        if(e.getActionCommand().equals("Sans-serif")) this.textField.setFont(new Font(
+                Font.SANS_SERIF,
+                textField.getFont().getStyle(),
+                textField.getFont().getSize()));
 }
