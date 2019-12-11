@@ -18,4 +18,19 @@ class Rational {
         numerator = num;
         denominator = den;
     }
+    public int getNumerator() {
+        return this.numerator;
+    }
+    public int getDenominator() {
+        return this.denominator;
+    }
+    public void setNumerator(int n) {
+        this.numerator = n;
+    }
+    public void setDenominator(int d) {
+        this.denominator = d;
+    }
+    public String toString() {
+        return numerator + "/" + denominator + "\n" + "This is it's decimal value: " + decimalValue() + "\n" ;
+    }
 }
