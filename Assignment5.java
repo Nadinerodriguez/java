@@ -36,4 +36,17 @@ class Rational {
     public String toString() {
         return numerator + "/" + denominator + "\n" + "This is it's decimal value: " + decimalValue() + "\n" ;
     }
+    public double decimalValue() {
+        return (double) numerator/denominator;
+    }
+    public boolean equals(Rational other) {
+        return this.decimalValue() == other.decimalValue();
+    }
+    public Rational pow(int x) {
+        if(x == 0) return new Rational(1,1); // Base Case
+        return this.times(pow(x-1)); // Recursive call
+    }
+    public Rational reciprocal() {
+        return new Rational (denominator, numerator);
+    }
 }
