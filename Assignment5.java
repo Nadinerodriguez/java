@@ -28,7 +28,10 @@ class Rational {
         this.numerator = n;
     }
     public void setDenominator(int d) {
-        this.denominator = d;
+        if (d == 0)
+            throw new IllegalDenominatorException("Denominator cannot be zero");
+        else
+            this.denominator = d;
     }
     public String toString() {
         return numerator + "/" + denominator + "\n" + "This is it's decimal value: " + decimalValue() + "\n" ;
