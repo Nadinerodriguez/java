@@ -49,4 +49,20 @@ class Rational {
     public Rational reciprocal() {
         return new Rational (denominator, numerator);
     }
+    public Rational plus(Rational x) {
+        int numerator = (this.numerator * x.denominator) + (this.denominator * x.numerator);
+        int denominator = this.denominator * x.denominator;
+        return new Rational(numerator, denominator);
+    }
+    public Rational minus(Rational x) {
+        int numerator = (this.numerator * x.denominator) - (this.denominator * x.numerator);
+        int denominator = this.denominator * x.denominator;
+        return new Rational(numerator, denominator);
+    }
+    public Rational times(Rational x) {
+        return new Rational(this.numerator * x.numerator, this.denominator * x.denominator);
+    }
+    public Rational divideBy(Rational x) {
+        return this.times(x.reciprocal());
+    }
 }
