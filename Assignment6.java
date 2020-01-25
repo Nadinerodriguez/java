@@ -28,3 +28,46 @@ class Node<T> {
         next = n;
     }
 }
+class LinkedList<T> {
+    private Node<T> head;
+    private int size;
+
+    public LinkedList() {
+        head = null;
+        size = 0;
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public void addHead(Character d) {
+        Node<T> n = new Node<T>((T) d, head);
+        head = n;
+        size++;
+    }
+
+    public Character removeHead() throws Exception {
+        if (head == null)
+            throw new Exception("Empty List");
+        Node<T> n = head;
+        head = head.getNext();
+        size--;
+        return (Character) n.getData();
+    }
+
+    public String toString() {
+        String ans = "";
+        Node n = head;
+        while (n != null) {
+            ans += n.getData();
+            ans += "-->";
+            n = n.getNext();
+        }
+        return ans;
+    }
+}
