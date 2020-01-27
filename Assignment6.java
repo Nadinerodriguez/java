@@ -71,3 +71,22 @@ class LinkedList<T> {
         return ans;
     }
 }
+class Stack<T> {
+    private LinkedList data;
+
+    public Stack() {
+        data = new LinkedList();
+    }
+
+    public T pop() throws Exception {
+        return (T) data.removeHead();
+    }
+
+    public void push(T x) {
+        data.addHead((Character)x);
+    }
+
+    public int size() {
+        return data.size();
+    }
+}
