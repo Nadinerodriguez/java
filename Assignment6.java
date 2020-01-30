@@ -1,3 +1,46 @@
+import java.util.Scanner;
+
+public class Assignment6 {
+    public static void main(String[] args) throws Exception {
+        System.out.println("Please enter an input: ");
+        Scanner in = new Scanner(System.in);
+        String input = in.nextLine();
+        parenthesesBalanced(input);
+    }
+    public static boolean parenthesesBalanced(String input) throws Exception {
+        Stack<Character> stack = new Stack<>();
+        for(int i = 0 ; i < input.length(); i++) {
+            char curr = input.charAt(i);
+            if(curr == '(' || curr == '{' || curr == '[') stack.push(curr);
+            else if(curr == ')' || curr == '}' || curr ==']') {
+                try {
+                    if ( !(matchedParentheses(stack.pop(), curr)) ) {
+                        System.out.println("Parentheses aren't balanced");
+                        return false;
+                    }
+                } catch (Exception e) {
+                    System.out.println("Parentheses aren't balanced");
+                    return false;
+                }
+            }
+        }
+        if(stack.size() != 0)
+            System.out.println("Parentheses aren't balanced");
+        else
+            System.out.println("Parentheses are balanced");
+        return false;
+    }
+    // For extra credit
+    public static boolean matchedParentheses(char c1, char c2) {
+        if (c1 == '(' && c2 == ')')
+            return true;
+        else if (c1 == '{' && c2 == '}')
+            return true;
+        else if (c1 == '[' && c2 == ']')
+            return true;
+        return false;
+    }
+}
 class Node<T> {
     private T data;
     private Node<T> next;
